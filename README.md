@@ -1,2 +1,0 @@
-# jornada-api
-api
