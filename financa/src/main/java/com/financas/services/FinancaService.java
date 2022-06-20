@@ -16,7 +16,7 @@ public class FinancaService extends ServiceGenerico<Financa, Long> {
     }
 
     @Override
-    protected RepositoryGenerico<Financa, Long> getRepositoryGenerico() {
+    protected FinancaRepository getRepositoryGenerico() {
         return financaRepository;
     }
 }
