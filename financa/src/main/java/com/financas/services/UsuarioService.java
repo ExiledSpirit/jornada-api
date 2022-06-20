@@ -23,9 +23,9 @@ public class UsuarioService extends ServiceGenerico<Usuario, Long>{
         return usuarioRepository;
     }
 
-    public boolean autenticar(Map<String, String> credenciais) {
+    public Usuario autenticar(Map<String, String> credenciais) throws Exception {
         Optional<Usuario> possivelUsuario = getRepositoryGenerico().autenticar(credenciais.get("login"), credenciais.get("senha"));
-        if (possivelUsuario.isPresent()) return true;
-        return false;
+        if (possivelUsuario.isPresent()) return possivelUsuario.get();
+        throw new Exception("Não autenticado");
     }
 }

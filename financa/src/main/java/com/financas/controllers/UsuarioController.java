@@ -29,7 +29,7 @@ public class UsuarioController extends ControllerGenerico<Usuario, Long>{
     }
 
     @PostMapping("/autenticar")
-    ResponseEntity<Boolean> autenticar(@RequestBody Map<String, String> credenciais) {
+    ResponseEntity<Usuario> autenticar(@RequestBody Map<String, String> credenciais) throws Exception {
         return new ResponseEntity<>(getServiceGenerico().autenticar(credenciais), HttpStatus.OK);
     }
 }

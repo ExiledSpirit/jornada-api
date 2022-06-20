@@ -30,21 +30,31 @@ public class Projeto extends EntidadeGenerica {
     @Column(name = "saldo")
     private Float saldo;
 
+    @Column(name = "imagem")
+    private String imagem;
+
+    @Column(name = "descricao")
+    private String descricao;
+
     public Projeto() { }
 
-    public Projeto(Set<Usuario> membros, Set<Financa> financas, String titulo, Float saldo) {
+    public Projeto(Set<Usuario> membros, Set<Financa> financas, String titulo, Float saldo, String imagem, String descricao) {
         this.membros = membros;
         this.financas = financas;
         this.titulo = titulo;
         this.saldo = saldo;
+        this.imagem = imagem;
+        this.descricao = descricao;
     }
 
-    public Projeto(Long id, Date createdAt, Boolean deletado, Set<Usuario> membros, Set<Financa> financas, String titulo, Float saldo) {
+    public Projeto(Long id, Date createdAt, Boolean deletado, Set<Usuario> membros, Set<Financa> financas, String titulo, Float saldo, String imagem, String descricao) {
         super(id, createdAt, deletado);
         this.membros = membros;
         this.financas = financas;
         this.titulo = titulo;
         this.saldo = saldo;
+        this.imagem = imagem;
+        this.descricao = descricao;
     }
 
     public Set<Usuario> getMembros() {
@@ -79,6 +89,22 @@ public class Projeto extends EntidadeGenerica {
         this.saldo = saldo;
     }
 
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
     @Override
     public String toString() {
         return "Projeto{" +
@@ -86,6 +112,8 @@ public class Projeto extends EntidadeGenerica {
                 ", financas=" + financas +
                 ", titulo='" + titulo + '\'' +
                 ", saldo=" + saldo +
+                ", imagem='" + imagem + '\'' +
+                ", descricao='" + descricao + '\'' +
                 '}';
     }
 }

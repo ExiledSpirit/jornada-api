@@ -6,6 +6,8 @@ import com.financas.repositories.RepositoryGenerico;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProjetoService extends ServiceGenerico<Projeto, Long> {
     private final ProjetoRepository projetoRepository;
@@ -16,7 +18,11 @@ public class ProjetoService extends ServiceGenerico<Projeto, Long> {
     }
 
     @Override
-    protected RepositoryGenerico<Projeto, Long> getRepositoryGenerico() {
+    protected ProjetoRepository getRepositoryGenerico() {
         return projetoRepository;
+    }
+
+    public List<Projeto> buscarProjetosPorUsuarioId(Long usuarioId) {
+        return getRepositoryGenerico().buscarProjetosPorUsuarioId(usuarioId);
     }
 }

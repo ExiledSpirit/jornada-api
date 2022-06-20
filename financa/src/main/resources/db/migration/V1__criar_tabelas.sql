@@ -29,6 +29,8 @@ CREATE TABLE IF NOT EXISTS public.projeto(
     deletado boolean NOT NULL default false,
     titulo varchar(255) not null,
     saldo float NOT NULL default 0,
+    imagem varchar(255),
+    descricao varchar(255),
     CONSTRAINT pk_projeto PRIMARY KEY (id)
 );
 
