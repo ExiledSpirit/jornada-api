@@ -2,7 +2,6 @@ package com.financas.services;
 
 import com.financas.models.EntidadeGenerica;
 import com.financas.repositories.RepositoryGenerico;
-import jdk.swing.interop.SwingInterOpUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
