@@ -52,8 +52,10 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.financas.FinancasApplication</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
